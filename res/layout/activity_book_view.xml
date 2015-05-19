@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/GeneralLayout"
+    android:longClickable="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ViewportLayout"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/Bar"
+            >
+        </LinearLayout>
+
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Viewport"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:background="#ffe5e6ff"
+            android:layout_below="@+id/CloseButton"/>
+
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:text="@string/CloseButton"
+            android:id="@+id/CloseButton"
+            android:singleLine="false"
+            android:background="#ffffcabe"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"/>
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:text="+"
+            android:id="@+id/zoomInButton"
+            android:background="#ff5451ff"
+            android:textColor="#ffffffff"
+            android:layout_alignBottom="@+id/CloseButton"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:text="-"
+            android:id="@+id/zoomOutButton"
+            android:background="#FF5451FF"
+            android:textColor="#ffffffff"
+            android:layout_alignBottom="@+id/zoomInButton"
+            android:layout_toEndOf="@+id/space"/>
+
+        <Space
+            android:layout_width="10px"
+            android:layout_height="20px"
+            android:layout_alignBottom="@+id/zoomOutButton"
+            android:layout_toEndOf="@+id/zoomInButton"
+            android:id="@+id/space"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
